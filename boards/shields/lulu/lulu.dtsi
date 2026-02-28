@@ -6,7 +6,6 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <zephyr/dt-bindings/led/led.h>
-#include <zephyr/dt-bindings/clock/rpi_pico_clock_common.h>
 
 #include <layouts/kata0510/lily58.dtsi>
 
@@ -74,7 +73,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         compatible = "raspberrypi,pico-spi-pio";
         #address-cells = <1>;
         #size-cells = <0>;
-        clocks = <&clocks RPI_PICO_CLKID_CLK_SYS>;
+        clocks = <&system_clk>;
         clock-frequency = <4000000>;
         pinctrl-0 = <&ws2812_pio1_default>;
         pinctrl-names = "default";
